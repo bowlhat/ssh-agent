@@ -9,5 +9,6 @@ func New() func() ([]ssh.Signer, error) {
 	if pageant.Available() {
 		return pageant.New().Signers
 	}
+
 	return nil
 }
